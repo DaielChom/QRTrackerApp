@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
             call.enqueue(new Callback<official>() {
                 @Override
                 public void onResponse(Call<official> call, Response<official> response) {
-                    
+
                     Log.d("s",response.message());
                     Log.d("s",response.toString());
                     Log.d("s",response.body().toString());
