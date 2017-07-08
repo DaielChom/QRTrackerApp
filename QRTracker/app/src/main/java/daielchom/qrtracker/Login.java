@@ -6,6 +6,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.support.design.widget.Snackbar;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import android.util.Log;
 
 public class Login extends AppCompatActivity {
 
@@ -25,7 +30,25 @@ public class Login extends AppCompatActivity {
             Snackbar.make(view, "" + "Ingrese un ID", Snackbar.LENGTH_LONG).show();
         }
         else{
+
             String idOfficial = txIdOfficial.getText().toString();
+            QRTrackerService apiServices = retrofitClient.getClient().create(QRTrackerService.class);
+            Call<official> call = apiServices.getOfficialAPI(idOfficial);
+
+            call.enqueue(new Callback<official>() {
+                @Override
+                public void onResponse(Call<official> call, Response<official> response) {
+                    Log.d("Mu","YES");
+                }
+
+                @Override
+                public void onFailure(Call<official> call, Throwable t) {
+                    Log.d("Mu",call.request().toString());
+                    Log.d("Mu",t.toString());
+
+                }
+            });
+
 
         }
 
