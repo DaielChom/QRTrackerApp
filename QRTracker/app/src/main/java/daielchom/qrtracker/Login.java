@@ -1,5 +1,6 @@
 package daielchom.qrtracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +12,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import android.util.Log;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -38,14 +40,32 @@ public class Login extends AppCompatActivity {
             call.enqueue(new Callback<official>() {
                 @Override
                 public void onResponse(Call<official> call, Response<official> response) {
-                    Log.d("Mu","YES");
+                    
+                    Log.d("s",response.message());
+                    Log.d("s",response.toString());
+                    Log.d("s",response.body().toString());
+                    Log.d("s",String.valueOf(response.code()));
+                    Log.d("s",response.headers().toString());
+                    Log.d("s",response.raw().toString());
+
+                    try {
+
+                        String officialResponse = response.body().getIdOfficial();
+                        Intent send_params = new Intent(Login.this, main.class);
+                        send_params.putExtra("official", officialResponse);
+                        startActivityForResult(send_params,0);
+                    }catch (Exception e){
+                        Toast.makeText(Login.this,"Usuario no existe", Toast.LENGTH_SHORT).show();
+                    }
+
+
+
                 }
 
                 @Override
                 public void onFailure(Call<official> call, Throwable t) {
-                    Log.d("Mu",call.request().toString());
-                    Log.d("Mu",t.toString());
 
+                    Toast.makeText(Login.this,"Error", Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -53,5 +73,6 @@ public class Login extends AppCompatActivity {
         }
 
     }
+
 
 }

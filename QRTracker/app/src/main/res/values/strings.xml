@@ -3,4 +3,8 @@
     <string name="txBienvenido">Bienvenido</string>
     <string name="txIDOfficial"> ID Funcionario</string>
     <string name="btIngresar">Ingresar</string>
+    <string name="title_activity_main">QRTracker</string>
+    <string name="title_qr">QR</string>
+    <string name="title_monitor">Monitor</string>
+    <string name="title_List">List</string>
 </resources>

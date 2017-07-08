@@ -30,4 +30,12 @@ public class official {
     public void setNameOfficial(String nameOfficial) {
         this.nameOfficial = nameOfficial;
     }
+
+    @Override
+    public String toString() {
+        return "official{" +
+                "idOfficial='" + idOfficial + '\'' +
+                ", nameOfficial='" + nameOfficial + '\'' +
+                '}';
+    }
 }
