@@ -1,5 +1,6 @@
 package daielchom.qrtracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -16,7 +17,7 @@ public class main extends AppCompatActivity {
     private TextView mTextMessage;
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private Fragment fragment;
-
+    private String paquete = "null";
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -27,7 +28,7 @@ public class main extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_qr:
 
-                    mTextMessage.setText(R.string.title_qr);
+
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragment = new fragmentQR();
                     fragmentTransaction.replace(R.id.content, fragment).commit();
@@ -36,7 +37,6 @@ public class main extends AppCompatActivity {
 
                 case R.id.navigation_monitor:
 
-                    mTextMessage.setText(R.string.title_monitor);
                     FragmentTransaction fragmentTransaction1 = fragmentManager.beginTransaction();
                     fragment = new fragmentMonitor();
                     fragmentTransaction1.replace(R.id.content, fragment).commit();
@@ -44,7 +44,7 @@ public class main extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_list:
-                    mTextMessage.setText(R.string.title_List);
+
                     FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
                     fragment = new fragmentList();
                     fragmentTransaction2.replace(R.id.content, fragment).commit();
@@ -61,9 +61,26 @@ public class main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setPaquete(getIntent().getStringExtra("id_paquete"));
+
         mTextMessage = (TextView) findViewById(R.id.message);
+        mTextMessage.setText(paquete);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
+
+    public String getPaquete() {
+        return paquete;
+    }
+
+    public void setPaquete(String paquete) {
+        this.paquete = paquete;
+    }
+
+
+
+
+
 
 }
