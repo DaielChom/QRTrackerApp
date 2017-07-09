@@ -47,6 +47,7 @@ public class Login extends AppCompatActivity {
                     Log.d("s",String.valueOf(response.code()));
                     Log.d("s",response.headers().toString());
                     Log.d("s",response.raw().toString());
+                    //Log.d("s",response.errorBody().toString());
 
                     try {
 
