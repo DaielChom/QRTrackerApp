@@ -61,7 +61,7 @@ public class main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setPaquete(getIntent().getStringExtra("id_paquete"));
+        setPaquete(getIntent().getStringExtra("official"));
 
         mTextMessage = (TextView) findViewById(R.id.message);
         mTextMessage.setText(paquete);

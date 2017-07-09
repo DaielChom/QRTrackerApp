@@ -40,22 +40,14 @@ public class Login extends AppCompatActivity {
             call.enqueue(new Callback<official>() {
                 @Override
                 public void onResponse(Call<official> call, Response<official> response) {
+                    if(response.body().getIdOfficial() != null){
 
-                    Log.d("s",response.message());
-                    Log.d("s",response.toString());
-                    Log.d("s",response.body().toString());
-                    Log.d("s",String.valueOf(response.code()));
-                    Log.d("s",response.headers().toString());
-                    Log.d("s",response.raw().toString());
-                    //Log.d("s",response.errorBody().toString());
 
-                    try {
-
-                        String officialResponse = response.body().getIdOfficial();
+                        String s = response.body().getIdOfficial();
                         Intent send_params = new Intent(Login.this, main.class);
-                        send_params.putExtra("official", officialResponse);
+                        send_params.putExtra("official", s);
                         startActivityForResult(send_params,0);
-                    }catch (Exception e){
+                    }else{
                         Toast.makeText(Login.this,"Usuario no existe", Toast.LENGTH_SHORT).show();
                     }
 
