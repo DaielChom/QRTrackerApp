@@ -7,4 +7,7 @@
     <string name="title_qr">QR</string>
     <string name="title_monitor">Monitor</string>
     <string name="title_List">List</string>
+    <string name="listPackage_ID"> ID </string>
+    <string name="listPackage_Description"> Description </string>
+    <string name="listPackage_State"> State </string>
 </resources>

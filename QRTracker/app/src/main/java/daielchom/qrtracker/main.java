@@ -63,8 +63,8 @@ public class main extends AppCompatActivity {
 
         setPaquete(getIntent().getStringExtra("official"));
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        mTextMessage.setText(paquete);
+        //mTextMessage = (TextView) findViewById(R.id.message);
+        //mTextMessage.setText(paquete);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 

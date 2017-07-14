@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -25,9 +27,16 @@ import static android.R.attr.data;
 
 public class fragmentList extends Fragment {
 
+    private ListView listPackage;
+    private View view;
+    private packageAdapter adapter;
+
     public fragmentList(){}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+
+        view = inflater.inflate(R.layout.fragment_list, container, false);
+        listPackage = (ListView) view.findViewById(R.id.listPackage);
 
 
         QRTrackerService api = retrofitClient.getClient().create(QRTrackerService.class);
@@ -40,9 +49,10 @@ public class fragmentList extends Fragment {
 
             @Override
             public void onResponse(Call<paqueteList> call, Response<paqueteList> response) {
+                adapter = new packageAdapter(getContext(),response.body().getPaqueteList());
+                listPackage.setAdapter(adapter);
 
 
-            Log.d("SS", response.body().getPaqueteList().toString());
 
 
 
@@ -55,6 +65,6 @@ public class fragmentList extends Fragment {
                 Log.d("x",t.toString());
             }
         });
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        return view;
     }
 }
