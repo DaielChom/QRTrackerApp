@@ -67,9 +67,10 @@ public class main extends AppCompatActivity {
         //mTextMessage.setText(paquete);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
+        navigation.getMenu().getItem(2).setChecked(true);
+        
         FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
-        fragment = new fragmentList();
+        fragment = new fragmentMonitor();
         fragmentTransaction2.replace(R.id.content, fragment).commit();
 
     }
