@@ -10,4 +10,11 @@
     <string name="listPackage_ID"> ID </string>
     <string name="listPackage_Description"> Description </string>
     <string name="listPackage_State"> State </string>
+    <string name="txIDPaquete">ID Paquete</string>
+    <string name="txHourMonitor">Hour</string>
+    <string name="txDateMonitor">Monitor</string>
+    <string name="txLong">Longuitud</string>
+    <string name="txAlt">Altitud</string>
+    <string name="txLat">Latitud</string>
+    <string name="btMonitor">Enviar</string>
 </resources>

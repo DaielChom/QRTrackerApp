@@ -43,8 +43,7 @@ public class fragmentList extends Fragment {
         Map<String, String> options = new HashMap<>();
         options.put("state","BodegaANDRecogido");
 
-        Call<paqueteList> call = api.getPackage(options);
-        Log.d("SS",call.request().toString());
+        Call<paqueteList> call = api.getPackageList(options);
         call.enqueue(new Callback<paqueteList>(){
 
             @Override

@@ -48,6 +48,7 @@ public class fragmentQR extends Fragment implements ZXingScannerView.ResultHandl
 
                 Intent i = new Intent(getActivity(), main.class);
                 i.putExtra("id_paquete",rawResult.getText() );
+                i.putExtra("official",getArguments().getString("official"));
                 startActivity(i);
 
 

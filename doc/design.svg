@@ -787,9 +787,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="-53.585734"
-     inkscape:cy="373.14426"
+     inkscape:zoom="2.8"
+     inkscape:cx="441.49545"
+     inkscape:cy="735.23327"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1551,7 +1551,7 @@
        xml:space="preserve"
        id="flowRoot5412"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0;font-family:'Abyssinica SIL';-inkscape-font-specification:'Abyssinica SIL';letter-spacing:0px;word-spacing:0px;fill:#37483e;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,5.9598408,-6.0243091)"><flowRegion
+       transform="matrix(0.26458333,0,0,0.22907995,5.9598408,3.3278991)"><flowRegion
          id="flowRegion5414"
          style="line-height:0;word-spacing:0px;fill:#37483e;fill-opacity:1"><rect
            id="rect5416"
@@ -1583,7 +1583,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:3;font-family:'Padauk Book';-inkscape-font-specification:'Padauk Book, ';word-spacing:0px;fill:#37483e;fill-opacity:1"
          id="flowPara5460" /></flowRoot>    <g
        id="g5538"
-       transform="translate(2.720686)">
+       transform="matrix(1,0,0,0.86581399,2.720686,8.5438302)">
       <path
          inkscape:connector-curvature="0"
          id="path5468"
@@ -2138,5 +2138,27 @@
          id="path88"
          inkscape:connector-curvature="0" />
     </g>
-  </g>
+    <rect
+       style="opacity:1;fill:#536c5d;fill-opacity:1;stroke:none;stroke-width:0.60903031;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect4725-7-9-3-0-36"
+       width="17.175167"
+       height="6.4061456"
+       x="110.6195"
+       y="114.30548"
+       ry="1.0333186" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5412-8-6-1-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0;font-family:'Abyssinica SIL';-inkscape-font-specification:'Abyssinica SIL';letter-spacing:0px;word-spacing:0px;fill:#f9f9f9;fill-opacity:1;stroke:none"
+       transform="matrix(0.20666373,0,0,0.20666373,41.225232,61.060859)"><flowRegion
+         id="flowRegion5414-6-5-1-5"
+         style="line-height:0;word-spacing:0px;fill:#f9f9f9;fill-opacity:1"><rect
+           id="rect5416-8-6-5-3"
+           width="91.231155"
+           height="37.102688"
+           x="331.72131"
+           y="256.0141"
+           style="line-height:0;word-spacing:0px;fill:#f9f9f9;fill-opacity:1" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:3.5;font-family:'Padauk Book';-inkscape-font-specification:'Padauk Book, ';text-align:center;word-spacing:0px;text-anchor:middle;fill:#f9f9f9;fill-opacity:1"
+         id="flowPara5460-8-74-7-2">SEND</flowPara></flowRoot>  </g>
 </svg>

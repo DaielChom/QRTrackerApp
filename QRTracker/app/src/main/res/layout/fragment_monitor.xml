@@ -1,11 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center">
 
-    <RadioButton
-        android:id="@+id/radioButton"
+
+    <EditText
+        android:id="@+id/tx_monitor_id_package"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RadioButton" />
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txIDPaquete"
+        android:textAlignment="viewStart" />
+
+    <EditText
+        android:id="@+id/tx_monitor_id_official"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txIDOfficial" />
+
+    <EditText
+        android:id="@+id/tx_monitor_hour_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txHourMonitor" />
+
+    <EditText
+        android:id="@+id/tx_monitor_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txDateMonitor" />
+
+    <Spinner
+        android:id="@+id/cb_monitor_state_package"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+    <EditText
+        android:id="@+id/tx_monitor_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txLong" />
+
+    <EditText
+        android:id="@+id/tx_monitor_Lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txLat" />
+
+    <EditText
+        android:id="@+id/tx_monitor_Alt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txAlt" />
+
+    <Button
+        android:id="@+id/bt_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btMonitor"
+        />
 </LinearLayout>
